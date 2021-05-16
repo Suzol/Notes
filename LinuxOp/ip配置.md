@@ -8,11 +8,11 @@
 
 #### centos：
 
-###### 增加网卡eth1的ip
+###### 1.增加网卡eth1的ip
 
 `ip addr add 192.168.11.190/24 dev eth1`
 
-###### 增加网卡ip经过的路由
+###### 2.增加网卡ip经过的路由
 
 `ip route add default via 192.168.11.254 dev eth1`
 
@@ -24,9 +24,9 @@
 
 #### centos:
 
-###### ip a查看网卡名称，网卡名称为enp3s0 
+###### 1.ip a查看网卡名称，网卡名称为enp3s0
 
-###### vim /etc/sysconfig/network-scripts/ifcfg-enp3s0
+###### 2.vim /etc/sysconfig/network-scripts/ifcfg-enp3s0
 
 *   修改BOOTPROTO=static
 
@@ -39,11 +39,11 @@ GATEWAY=192.168.3.254       # 一般是配置地址的最后一段改为254
 DNS1=114.114.114.114        # DNS只有连接外网才用到
 DNS2=8.8.8.8
 ```
-###### service network restart
+###### 3.service network restart
 
 ping www.baidu.com测试连通性
 
-###### 执行 yum install net-tools（非必选）
+###### 4.执行 yum install net-tools（非必选）
 
 安装后就能使用ifconfig工具
 
